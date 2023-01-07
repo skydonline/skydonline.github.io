@@ -1,0 +1,22 @@
+:root {
+	--accent-color1: white;
+	--main-color1: #f5f6f7;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+	background: var(--main-color1);
+	margin: 0;
+	font-family: Helvetica;
+}
+
+h1 {
+	text-align: center;
+	color: var(--accent-color1);
+	
+}
