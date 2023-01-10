@@ -3,6 +3,7 @@
     --accent-color2: black; /* section header colors */
     --accent-color3: #888989; /* bar color */
 	--main-color1: #f5f6f7;
+    --certification-size: 12px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -66,4 +67,20 @@ li {
     border-bottom: 1px solid var(--accent-color3);
     margin: 2px 0;
     
+}
+
+main {
+    margin-top: 80px;
+}
+
+.certification {
+    font-size: 16px;
+}
+
+.issuer {
+    font-size: var(--certification-size);
+}
+
+.date {
+    font-size: var(--certification-size);
 }
