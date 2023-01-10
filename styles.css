@@ -78,7 +78,7 @@ main {
 }
 
 .issuer {
-    font-size: var(--certification-size);
+    font-size: 12px;
 }
 
 .date {
