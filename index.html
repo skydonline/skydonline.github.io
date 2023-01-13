@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device_width, initial-scale=1.0">
     <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
 	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"/>
 	<title>Sky Deng's Website</title>
 </head>
 
@@ -13,14 +15,17 @@
     <header>
         <h1 id="title">Sky Deng</h1>
         <nav>
-            <ul>
-                <li>
+            <ul id="header-nav">
+                <li class="header-nav-list">
                     <a href="#about">ABOUT</a>
                 </li>
-                <li>  
+                <li class="header-nav-list">
+                    <a href="#timeline">TIMELINE</a>
+                </li>
+                <li class="header-nav-list">  
                     <a href="#certifications">CERTIFICATIONS</a>
                 </li>
-                <li>
+                <li class="header-nav-list">
                     <a href="#other-info">OTHER</a>
                 </li>
             </ul>
@@ -35,13 +40,48 @@
 
 
         <div id="about-text">
+            <p id="about-me-p">Student</p>
+            <p id="last-updated">Last Updated: Jan 12, 2023</p>
+        </div>
 
+        <div id="cerifications">
+            <h1 class="section-header" id="certifications-header">TIMELINE</h1>
+            <div class="divider"></div>
+        </div>
+            
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                    <h2 class="timeline-title">2004</p>
+                    <p class="timeline-text">Born</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2 class="timeline-title">2022</p>
+                    <p class="timeline-text">Present</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2 class="timeline-title">2022</p>
+                    <p class="timeline-text">Present</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2 class="timeline-title">2023</p>
+                    <p class="timeline-text">Present</p>
+                </div>
+            </div>
         </div>
 
 
         <div id="cerifications">
-            <h1 class="section-header" id="certifications-header">CERTIFICATIONS/AWARDS</h1>
-            <div class="divider"></div>
+            <h1 class="section-header" id="certifications-header">CERTIFICATIONS & AWARDS</h1>
+            <div class="divider">
+        
+            </div>
         </div>
 
 
@@ -55,6 +95,7 @@
             <div id="cs50x">
                 <p class="certification">CS50x Introduction to Computer Science</p>
                 <p class="issuer">Harvard University</p>
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHarvard_University&psig=AOvVaw3qmUMjsiFtPx8zKuNn2xHq&ust=1673712327211000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCPCkx7n2xPwCFQAAAAAdAAAAABAD">
                 <p class="date">December 2022</p>
             </div>
 
@@ -79,7 +120,24 @@
 
 
         <div id="other-info-text">
-
+            <p id="contact">Contact:</p>
+                <ul id="contact-list">
+                    <li>
+                        <b>Email:</b> sky.deng.online@outlook.com
+                    </li>
+                    <li>
+                        <b>Cell:</b> (647) - 915 - 2648
+                    </li>
+                    <li><a href="https://www.instagram.com/skyd_2004/">
+                          <i class="fab fa-instagram"></i></a> skyd_2004
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/skydeng">
+                          <i class="fab fa-linkedin-in"></i></a> Sky Deng
+                    </li>
+                    <li>
+                        Feel free to reach out anytime, email is preferred.
+                    </li>
+                </ul>
         </div>
     </main>
 
