@@ -1,9 +1,9 @@
 :root {
 	--accent-color1: rgb(57, 60, 65); /* nav bar colors */
-  --accent-color2: black; /* section header colors */
-  --accent-color3: #888989; /* bar color */
-	--main-color1: #f5f6f7;
-  --certification-size: 12px;
+  --accent-color2: #555555; /* section header and social icon colors */
+	--main-color1: #f5f6f7; /* body and header color */
+  --divider-color: rgba(0, 0, 0, 0.1); /* coloring under section bars */
+  --certification-size: 12px; /* size of certification section text */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,6 +21,14 @@ body {
 	margin: 0;
 	font-family: sans-serif;
 }
+
+
+
+
+
+
+/* header and navbar section */
+
 
 #title {
 	text-align: center;
@@ -40,7 +48,7 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px var(--divider-color);
   z-index: 2;
 }
 
@@ -69,7 +77,7 @@ a {
 }
 
 .divider {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px var(--divider-color);
   margin: 2px 0;
   height: 5px;
 }
@@ -78,17 +86,12 @@ main {
   margin-top: 80px;
 }
 
-.certification {
-  font-size: 16px;
-}
 
-.issuer {
-  font-size: var(--certification-size);
-}
 
-.date {
-  font-size: var(--certification-size);
-}
+
+
+/* about section */
+
 
 #about-text {
   font-size: 14px;
@@ -102,7 +105,47 @@ main {
 #last-updated {
   font-size: 12px;
   text-align: center;
+}
 
+
+
+
+/* certification section */
+
+
+.certification {
+  font-size: 16px;
+}
+
+.issuer {
+  font-size: var(--certification-size);
+}
+
+.date {
+  font-size: var(--certification-size);
+}
+
+#certifications-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+
+
+
+/* other info section */
+
+
+#other-info-text {
+  padding-left: 10px;
+}
+
+#contact-list {
+  font-size: 14px;
 }
 
 #contact-list {
@@ -115,22 +158,50 @@ main {
   padding-bottom: 5px;
 }
 
-#certifications-section {
+#social-icons {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--accent-color2);
+  color: #fff;
+  margin: 0 15px 15px 0;
+  cursor: pointer;
+  transition: background-color 1s ease-out 100ms;
+}
+
+.icon-circle:hover {
+  background-color: white;
+  filter: invert(1);
+}
+
+.icon-link:hover {
+  filter: invert(1);
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  position: relative;
+  padding: 0;
   margin: 0 auto;
-  padding: 20px 10px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-#other-info-text {
-  padding-left: 10px;
-}
 
-#contact-list {
-  font-size: 14px;
-}
+
+
+
+/* timeline stuff */
+
 
 .timeline-title {
   font-family: "Anton";
@@ -138,7 +209,7 @@ main {
 
 .timeline-text {
   font-family: "Raleway";
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .timeline {
