@@ -188,12 +188,8 @@ main {
 .icons {
   display: flex;
   justify-content: center;
-  top: 50%;
-  padding: 0;
   margin: 0 auto;
   align-items: center;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 
