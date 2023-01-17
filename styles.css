@@ -24,18 +24,13 @@ body {
 
 
 
-
-
-
 /* header and navbar section */
-
-
 #title {
 	text-align: center;
 	color: var(--accent-color1);
 	font-size: 3.2vw;
   margin-left: 15px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Anton";
   font-weight: normal;
 }
 
@@ -88,11 +83,7 @@ main {
 
 
 
-
-
 /* about section */
-
-
 #about-text {
   font-size: 14px;
 }
@@ -109,10 +100,7 @@ main {
 
 
 
-
 /* certification section */
-
-
 .certification {
   font-size: 16px;
 }
@@ -136,10 +124,63 @@ main {
 
 
 
+/* project section */
+#projects-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.content {
+  display: none;
+}
+
+.projects {
+  align-items: center;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.project-text {
+  font-weight: normal;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.project-header {
+  font-size: 16px;
+}
+
+.project-date {
+  font-size: 14px;
+}
+
+.project-notes {
+  font-size: 13px;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  filter: invert(1);
+  display: flex;
+  justify-content: center;
+}
+
+
 
 /* other info section */
-
-
 #other-info-text {
   padding-left: 10px;
 }
@@ -186,9 +227,9 @@ main {
 }
 
 .icons {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  place-items: center;
   text-align: center;
   margin: 0 auto;
   vertical-align: middle;
@@ -196,11 +237,7 @@ main {
 
 
 
-
-
 /* timeline stuff */
-
-
 .timeline-title {
   font-family: "Anton";
 }
@@ -294,7 +331,7 @@ main {
 }
 
 /* The actual content */
-.content {
+.timeline-content {
   padding: 20px 30px;
   background-color: white;
   position: relative;

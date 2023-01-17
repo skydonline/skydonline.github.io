@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"/>
 	<title>Sky Deng's Website</title>
+    
 </head>
 
 
 <body>
+
+    <!-- header and navigation bar -->
     <header>
         <h1 id="title">Sky Deng</h1>
         <nav>
@@ -38,69 +41,79 @@
 
 
     <main>
+        <!-- about header -->
         <div id="#about">
             <h1 class="section-header" id="about-header">ABOUT ME</h1>
             <div class="divider"></div>
         </div>
 
-
+        <!-- about text -->
         <div id="about-text">
-            <p id="about-me-p">Student</p>
+            <p id="about-me-p">Meet Sky, a computer science student at McMaster University. 
+                He is a dedicated and hardworking individual who is passionate about technology and programming. 
+                Prior to his studies, Sky was a competitive swimmer, competing at the provincial level. 
+                He brings the same level of commitment and discipline to his academics as he did to his swimming career, consistently achieving top grades in his classes. 
+                He is always eager to learn new skills and technologies.
+            </p>
         </div>
 
-        <div id="cerifications">
+        <!-- timeline header -->
+        <div id="timeline">
             <h1 class="section-header" id="certifications-header">TIMELINE</h1>
             <div class="divider"></div>
         </div>
             
+        <!-- timeline -->
+        <div id="timeline-border-box">
         <div class="timeline">
             <div class="container left">
-                <div class="content">
+                <div class="timeline-content">
                     <h2 class="timeline-title">2004</p>
                     <p class="timeline-text">Start</p>
                 </div>
             </div>
             <div class="container right">
-                <div class="content">
+                <div class="timeline-content">
                     <h2 class="timeline-title">Sept. 2013</p>
                     <p class="timeline-text">Started competitively swimming</p>
                 </div>
             </div>
             <div class="container left">
-                <div class="content">
+                <div class="timeline-content">
                     <h2 class="timeline-title">May 20, 2015</p>
                     <p class="timeline-text">Moved from Mississauga to Oakville</p>
                 </div>
             </div>
             <div class="container right">
-                <div class="content">
+                <div class="timeline-content">
                     <h2 class="timeline-title">Dec. 19, 2022</p>
                     <p class="timeline-text">Decided to pursue a degree in Math & Computer Science</p>
                 </div>
             </div>
             <div class="container left">
-                <div class="content">
+                <div class="timeline-content">
                     <h2 class="timeline-title">Jan. 7, 2023</p>
                     <p class="timeline-text">Started creating this website!</p>
                 </div>
             </div>
             <div class="container right">
-                <div class="content">
+                <div class="timeline-content">
                     <h2 class="timeline-title">2023</p>
                     <p class="timeline-text">Present</p>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <div id="cerifications">
+        <!-- certifications header -->
+        <div id="certifications">
             <h1 class="section-header" id="certifications-header">CERTIFICATIONS & AWARDS</h1>
             <div class="divider">
         
             </div>
         </div>
 
-
+        <!-- certifications section -->
         <div id="certifications-section">
             <div id="responsive-web-design">
                 <p class="certification">Responsive Web Design</p>
@@ -128,19 +141,38 @@
             </div>
         </div>
 
-
+        <!-- projects & learning header -->
         <div id="#projects">
             <h1 class="section-header" id="about-header">PROJECTS & LEARNING</h1>
             <div class="divider"></div>
         </div>
 
+        <div id="projects-section">
+            <div class="collapsible-section">
+                <button type="button" class="btn btn-primary toggle-button">Show/Hide Content 1</button>
+                <div id="collapsible-content" class="content">
+                    <p>Website</p>
+                    <p>Through learning HTML & CSS in freeCodeCamp, I decided to create my own portfolio website to demonstrate my learning. The purpose of this website was to get a general understanding of coding, as well as display my talents and skillset. There are some elements that I learned and used that were self-taught, through other online resources.
+                    </p>
+                </div>
+              </div>
 
+              <div class="collapsible-section">
+                <button type="button" class="btn btn-primary toggle-button">Show/Hide Content 2</button>
+                <div class="collapsible-content">
+                  <p>Here's some content that will be shown/hidden when the button is clicked.</p>
+                </div>
+              </div>
+        </div>
+
+
+        <!-- other info header -->
         <div id="other-info">
             <h1 class="section-header" id="other-header">OTHER INFO</h1>
             <div class="divider"></div>
         </div>
 
-
+        <!-- other info text -->
         <div id="other-info-text">
             <p id="contact">Contact:</p>
                 <ul id="contact-list">
@@ -174,12 +206,32 @@
         </div>
         
     </main>
-
-
     
     <footer>
-        <p id="last-updated">Last Updated: Jan. 16, 2023</p>
+        <!-- last updated -->
+        <p id="last-updated">Last Updated: Jan. 14, 2023</p>
     </footer>
 
+
+
+    <script>
+   var buttons = document.querySelectorAll(".toggle-button");
+
+// Add a click event listener to each button
+buttons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // Select the corresponding collapsible content
+    var content = this.nextElementSibling;
+    content.classList.toggle("open");
+
+// Change the button text
+if (content.classList.contains("open")) {
+  button.innerHTML = "Hide Content";
+} else {
+  button.innerHTML = "Show Content";
+}
+});
+});
+    </script>
 </body>
 </html>
