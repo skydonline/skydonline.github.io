@@ -49,7 +49,7 @@
 
         <!-- about text -->
         <div id="about-text">
-            <p id="about-me-p">Meet Sky, a computer science student at McMaster University. 
+            <p id="about-me-p">Meet Sky, a math and computer science student at McMaster University. 
                 He is a dedicated and hardworking individual who is passionate about technology and programming. 
                 Prior to his studies, Sky was a competitive swimmer, competing at the provincial level. 
                 He brings the same level of commitment and discipline to his academics as he did to his swimming career, consistently achieving top grades in his classes. 
@@ -68,8 +68,8 @@
         <div class="timeline">
             <div class="container left">
                 <div class="timeline-content">
-                    <h2 class="timeline-title">2004</p>
-                    <p class="timeline-text">Start</p>
+                    <h2 class="timeline-title">Nov. 24, 2004</p>
+                    <p class="timeline-text">Born in Toronto</p>
                 </div>
             </div>
             <div class="container right">
@@ -86,8 +86,20 @@
             </div>
             <div class="container right">
                 <div class="timeline-content">
-                    <h2 class="timeline-title">Dec. 19, 2022</p>
+                    <h2 class="timeline-title">May 2022</p>
+                    <p class="timeline-text">Accepted McMaster University Life Science offer</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="timeline-content">
+                    <h2 class="timeline-title">Dec. 2022</p>
                     <p class="timeline-text">Decided to pursue a degree in Math & Computer Science</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="timeline-content">
+                    <h2 class="timeline-title">Dec. 19, 2022</p>
+                    <p class="timeline-text">Finished first semester of University with a 3.92GPA/11.4</p>
                 </div>
             </div>
             <div class="container left">
@@ -115,29 +127,38 @@
 
         <!-- certifications section -->
         <div id="certifications-section">
-            <div id="responsive-web-design">
+            <div class="individual-certification" id="responsive-web-design">
                 <p class="certification">Responsive Web Design</p>
-                <p class="issuer">freeCodeCamp</p>
-                <p class="date">January 2023</p>
+                <div class="individual-certification-details">
+                    <p class="issuer">freeCodeCamp</p>
+                    <p class="date">January 2023</p>
+                </div>
             </div>
 
-            <div id="cs50x">
+            <div class="individual-certification" id="cs50x">
                 <p class="certification">CS50x Introduction to Computer Science</p>
-                <p class="issuer">Harvard University</p>
-                <a href="https://cs50.harvard.edu/x/2022/"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHarvard_University&psig=AOvVaw3qmUMjsiFtPx8zKuNn2xHq&ust=1673712327211000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCPCkx7n2xPwCFQAAAAAdAAAAABAD"></a>
-                <p class="date">December 2022</p>
+                <div class="individual-certification-details">
+                    <p class="issuer">Harvard University</p>
+                    <!-- <a href="https://cs50.harvard.edu/x/2022/"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHarvard_University&psig=AOvVaw3qmUMjsiFtPx8zKuNn2xHq&ust=1673712327211000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCPCkx7n2xPwCFQAAAAAdAAAAABAD"></a>
+                    -->
+                    <p class="date">December 2022</p>
+                </div>
             </div>
 
-            <div id="first-aid">
+            <div class="individual-certification" id="first-aid">
                 <p class="certification">Standard First Aid and CPR-C</p>
-                <p class="issuer">Lifesaving Society</p>
-                <p class="date">September 2021</p>
+                <div class="individual-certification-details">
+                    <p class="issuer">Lifesaving Society</p>
+                    <p class="date">September 2021</p>
+                </div>
             </div>
 
-            <div id="lifeguard">
+            <div class="individual-certification" id="lifeguard">
                 <p class="certification">National Lifeguard - Pool</p>
-                <p class="issuer">Lifesaving Society</p>
-                <p class="date">August 2021</p>
+                <div class="individual-certification-details">
+                    <p class="issuer">Lifesaving Society</p>
+                    <p class="date">August 2021</p>
+                </div>
             </div>
         </div>
 
@@ -147,24 +168,25 @@
             <div class="divider"></div>
         </div>
 
+        <!-- projects section -->
         <div id="projects-section">
             <div class="collapsible-section">
-                <button type="button" class="btn btn-primary toggle-button">Show/Hide Content 1</button>
-                <div id="collapsible-content" class="content">
-                    <p>Website</p>
-                    <p>Through learning HTML & CSS in freeCodeCamp, I decided to create my own portfolio website to demonstrate my learning. The purpose of this website was to get a general understanding of coding, as well as display my talents and skillset. There are some elements that I learned and used that were self-taught, through other online resources.
+                <div class="collapsible-buttons">
+                    <button class="collapsible-trigger" id="trigger1">Project 1</button>
+                    <button class="collapsible-trigger" id="trigger2">Project 2</button>
+                </div>
+
+                <div class="collapsible-content initial-state" id="content1">
+                    <p class="project-header">Website</p>
+                    <p class="project-content">Through learning HTML & CSS in freeCodeCamp, I decided to create my own portfolio website to demonstrate my learning. The purpose of this website was to get a general understanding of coding, as well as display my talents and skillset. There are some elements that I learned and used that were self-taught, through other online resources.
                     </p>
+                 </div>
+                 <div class="collapsible-content initial-state" id="content2">
+                    <p class="project-content">Collapsible content 2
+                        </p>
                 </div>
-              </div>
-
-              <div class="collapsible-section">
-                <button type="button" class="btn btn-primary toggle-button">Show/Hide Content 2</button>
-                <div class="collapsible-content">
-                  <p>Here's some content that will be shown/hidden when the button is clicked.</p>
-                </div>
-              </div>
-        </div>
-
+            </div>
+        </div>        
 
         <!-- other info header -->
         <div id="other-info">
@@ -208,30 +230,39 @@
     </main>
     
     <footer>
-        <!-- last updated -->
         <p id="last-updated">Last Updated: Jan. 14, 2023</p>
+        <p id="copyright">SKY DENG ©<div id="year"></div></p>
     </footer>
 
 
 
     <script>
-   var buttons = document.querySelectorAll(".toggle-button");
+        // allows for collapsible content
+        let triggers = document.getElementsByClassName("collapsible-trigger");
 
-// Add a click event listener to each button
-buttons.forEach(function(button) {
-  button.addEventListener("click", function() {
-    // Select the corresponding collapsible content
-    var content = this.nextElementSibling;
-    content.classList.toggle("open");
+for (let i = 0; i < triggers.length; i++) {
+    triggers[i].addEventListener("click", function() {
+        let contentId = this.getAttribute("id").replace("trigger", "content");
+        let content = document.getElementById(contentId);
+        let openContent = document.getElementsByClassName("collapsible-content open")[0];
+        if (content.classList.contains("open")) {
+            content.classList.remove("open");
+        } else {
+            if (openContent) {
+                openContent.classList.remove("open");
+            }
+            content.classList.add("open");
+        }
+    });
+} 
 
-// Change the button text
-if (content.classList.contains("open")) {
-  button.innerHTML = "Hide Content";
-} else {
-  button.innerHTML = "Show Content";
-}
-});
-});
+// update copyright year
+function updateYear() {
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("year").innerHTML = n;
+  }
+  updateYear();
     </script>
 </body>
 </html>
