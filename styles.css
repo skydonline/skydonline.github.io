@@ -1,6 +1,7 @@
 :root {
 	--accent-color1: rgb(57, 60, 65); /* nav bar colors */
   --accent-color2: #555555; /* section header and social icon colors */
+  --accent-color3: #B8C6DB; /* the color the social media buttons turn into */
 	--main-color1: #f5f6f7; /* body and header color */
   --divider-color: rgba(0, 0, 0, 0.1); /* coloring under section bars */
   --certification-size: 12px; /* size of certification section text */
@@ -137,8 +138,6 @@ main {
   margin-bottom: 100px;
   padding: 20px 10px;
   position: relative;
-  /*text-overflow: ellipsis;
-  white-space: nowrap;*/
   max-width: 90vw;
   align-items: center;
 }
@@ -158,6 +157,7 @@ main {
   word-wrap: break-word;
   text-decoration: underline;
   text-align: center;
+  font-size: 16px;
 }
 
 .collapsible-buttons {
@@ -183,7 +183,9 @@ main {
 
 .collapsible-trigger {
   border: none;
-  
+  background-color: var(--accent-color3);
+  font-family: "Anton";
+  border-radius: 15px;
 }
 
 .collapsible-button {
@@ -191,17 +193,6 @@ main {
   display: flex;
   justify-content: center;
   text-align: center;
-}
-
-.project-text {
-  font-weight: normal;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.project-header {
-  font-size: 16px;
 }
 
 .project-date {
@@ -264,12 +255,11 @@ main {
 }
 
 .icon-circle:hover {
-  background-color: white;
-  filter: invert(1);
+  background-color: var(--accent-color3);
 }
 
 .icon-link:hover {
-  filter: invert(1);
+	background-color: var(--accent-color3);
 }
 
 .icons {
