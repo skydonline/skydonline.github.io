@@ -102,14 +102,6 @@ main {
   font-size: 16px;
 }
 
-.issuer {
-  font-size: var(--certification-size);
-}
-
-.date {
-  font-size: var(--certification-size);
-}
-
 #certifications-section {
   display: flex;
   justify-content: center;
@@ -120,10 +112,25 @@ main {
   padding: 20px 10px;
 }
 
+.individual-certification {
+  display: inline-block;
+}
+
 .individual-certification-details {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
+  font-size: var(--certification-size);
+  float: right;
+  text-align: right;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.certification-image {
+  max-width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  align-items: left;
+  margin-left: 10px;
 }
 
 
@@ -183,9 +190,10 @@ main {
 
 .collapsible-trigger {
   border: none;
-  background-color: var(--accent-color3);
+  background-color: var(--accent-color2);
   font-family: "Anton";
   border-radius: 15px;
+  color: white;
 }
 
 .collapsible-button {
