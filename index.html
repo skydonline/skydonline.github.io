@@ -17,42 +17,52 @@
     <!-- header and navigation bar -->
     <header>
         <h1 id="title">Sky Deng</h1>
-        <nav>
-            <ul id="header-nav">
-                <li class="header-nav-list">
-                    <a href="#about">ABOUT</a>
-                </li>
-                <li class="header-nav-list">
-                    <a href="#timeline">TIMELINE</a>
-                </li>
-                <li class="header-nav-list">  
-                    <a href="#certifications">CERTIFICATIONS</a>
-                </li>
-                <li class="header-nav-list">
-                    <a href="#projects">PROJECTS</a>
-                </li>
-                <li class="header-nav-list">
-                    <a href="#other-info">OTHER</a>
-                </li>
-            </ul>
-        </nav>
+            <nav>
+                <ul id="header-nav">
+                    <li class="header-nav-list">
+                        <a class="nav-links" href="#about">ABOUT</a>
+                    </li>
+                    <li class="header-nav-list">
+                        <a class="nav-links" href="#timeline">TIMELINE</a>
+                    </li>
+                    <li class="header-nav-list">  
+                        <a class="nav-links" href="#certifications">CERTIFICATIONS</a>
+                    </li>
+                    <li class="header-nav-list">
+                        <a class="nav-links" href="#projects">PROJECTS</a>
+                    </li>
+                    <li class="header-nav-list">
+                        <a class="nav-links" href="#other-info">OTHER</a>
+                    </li>
+                </ul>
+            </nav>
     </header>
 
 
 
     <main>
+
+        <!-- landing -->
+        <div id="landing">
+            <p id="landing-text">Welcome to Sky's website, <br>
+                a self-made project.</p>
+        </div>
+
         <!-- about header -->
-        <div id="#about">
+        <div id="about">
             <h1 class="section-header" id="about-header">ABOUT ME</h1>
             <div class="divider"></div>
         </div>
 
         <!-- about text -->
         <div id="about-text">
-            <p id="about-me-p">I am a Life Science student, looking to transfer into Math and Computer Science at McMaster University. 
+            <img alt="picture of me" id="about-image" src="about-me.jpeg">
+            <p id="about-blurb">Student, Programmer & Fitness Fnatic</p>
+            <p id="about-me-p">I am currently a Life Science student at McMaster University, looking to transfer into Math and Computer Science. 
                 I am a dedicated and hardworking individual who is passionate about technology and programming. 
                 Prior to university, I was a competitive swimmer for 9 years, competing at the provincial level. 
-                I bring that same level of commitment and discipline to my academics as I did to my swimming career, consistently achieving top grades in my classes. 
+                I bring that same level of commitment and discipline to my academics as I did to my swimming career, consistently achieving top grades in my classes.
+                I am doing a lot of self-learning and projects (like this website for example!) outside of school. 
                 I am always eager to learn new skills and technologies, excited to see where the future takes me!
             </p>
         </div>
@@ -169,7 +179,7 @@
         </div>
 
         <!-- projects & learning header -->
-        <div id="#projects">
+        <div id="projects">
             <h1 class="section-header" id="about-header">PROJECTS & LEARNING</h1>
             <div class="divider"></div>
         </div>
@@ -184,7 +194,10 @@
 
                 <div class="collapsible-content initial-state" id="content1">
                     <p class="project-header">Website</p>
-                    <p class="project-content">Through learning HTML & CSS in freeCodeCamp, I decided to create my own portfolio website to demonstrate my learning. The purpose of this website was to get a general understanding of coding, as well as display my talents and skillset. There are some elements that I learned and used that were self-taught, through other online resources.
+                    <p class="project-content">Through learning HTML & CSS in freeCodeCamp, I decided to create my own portfolio website to demonstrate my learning. 
+                        This project was an exciting journey that involved the use of various web development technologies such as HTML, CSS, and JavaScript to create a visually appealing and user-friendly website. 
+                        My goal was to create a website that is not only functional but also easy to navigate for our visitors.
+                        I hope you enjoy browsing my website!
                     </p>
                  </div>
                  <div class="collapsible-content initial-state" id="content2">
@@ -203,20 +216,21 @@
         <!-- other info text -->
         <div id="other-info-text">
             <p id="contact">Contact:</p>
-                <ul id="contact-list">
-                    <li>
-                        <b>Email:</b> sky.deng.online@outlook.com
-                    </li>
-                    <li>
-                        <b>Cell:</b> (647) - 915 - 2648
-                    </li>
-                    <li>
-                        <b>Discord:</b> seazon#4200
-                    </li>
-                </ul>
+                <div id="contact-list">
+                    <p class="contact-list-text"><b>Email:</b> sky.deng.online@outlook.com</p>
+                    <p class="contact-list-text"><b>Cell:</b> (647) - 915 - 2648</p>
+                    <p class="contact-list-text"><b>Discord:</b> seazon#4200</p>
+                </div>
+
+                <div id="affiliate-links">
+                    <p id="affiliate-link-title">Affiliate Links:</p>
+                    <p class="affiliate-link-p"><a class="affiliate-link" href="https://retaliationproject.com/?ref=OkY5XRwvyIHMHP">Retaliation Project <i>(code SKY for 10% off)</i></a></p>
+                </div>
+
+
                 <div id="social-icons">
                     <div class="icon-circle">
-                        <a href="https://www.instagram.com/skyd_2004/">
+                        <a class="social-links" href="https://www.instagram.com/skyd_2004/">
                             <div class="icons">
                                 <i class="fab fa-instagram"></i>
                             </div>
@@ -224,7 +238,7 @@
                     </div>
                     
                     <div class="icon-circle">
-                        <a href="https://www.linkedin.com/in/skydeng">
+                        <a class="social-links" href="https://www.linkedin.com/in/skydeng">
                             <div class="icons">
                                 <i class="fab fa-linkedin-in"></i>
                             </div>
@@ -236,7 +250,7 @@
     </main>
     
     <footer>
-        <p id="last-updated">Last Updated: Jan. 14, 2023</p>
+        <p id="last-updated">Last Updated: Jan. 25, 2023</p>
         <p id="copyright">SKY DENG ©<div id="year"></div></p>
     </footer>
 

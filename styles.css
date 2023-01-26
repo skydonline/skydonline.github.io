@@ -1,10 +1,11 @@
 :root {
 	--accent-color1: rgb(57, 60, 65); /* nav bar colors */
-  --accent-color2: #555555; /* section header and social icon colors */
+  --accent-color2: #000000; /* section header and social icon colors */
   --accent-color3: #B8C6DB; /* the color the social media buttons turn into */
-	--main-color1: #f5f6f7; /* body and header color */
+	--main-color1: #DDD0C8; /* body and header color */
   --divider-color: rgba(0, 0, 0, 0.1); /* coloring under section bars */
   --certification-size: 12px; /* size of certification section text */
+  --projects-learning-section: 120px; /* size of projects & learning section */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,6 +16,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -57,7 +60,7 @@ header {
   list-style: none;
 }
 
-a {
+.nav-links  {
   text-decoration: none;
   color: var(--accent-color1);
 }
@@ -84,14 +87,46 @@ main {
 
 
 
+
+/* landing page */
+#landing {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "eurostile", sans-serif;
+}
+
+
+
 /* about section */
-#about-text {
-  font-size: 14px;
+#about-image {
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  align-items: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
 }
 
 #about-me-p {
-  text-align: center;
-  margin: 10px 15px 0px 15px;
+  margin: 0;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+#about-text {
+  height: 200px;
 }
 
 
@@ -142,7 +177,7 @@ main {
   flex-wrap: wrap;
   gap: 16px;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: var(--projects-learning-section);
   padding: 20px 10px;
   position: relative;
   max-width: 90vw;
@@ -162,20 +197,25 @@ main {
   padding: 0;
   max-width: 80vw;
   word-wrap: break-word;
-  text-decoration: underline;
+  font-weight: bold;  
   text-align: center;
   font-size: 16px;
 }
 
 .collapsible-buttons {
-  text-align: center;
+  width: 100%;
+  place-items: center;
+  margin: 0 auto;
+  display: flex;
 }
 
 .collapsible-content {
   display: none;
   position: absolute;
   transition: display 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  text-align: center;
   opacity: 0;
+  width: 100%;
 }
 
 .collapsible-content.initial-state {
@@ -194,13 +234,6 @@ main {
   font-family: "Anton";
   border-radius: 15px;
   color: white;
-}
-
-.collapsible-button {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 
 .project-date {
@@ -230,18 +263,34 @@ main {
   padding-left: 10px;
 }
 
-#contact-list {
+.contact-list-text {
+  margin: 0;
+  text-align: left;
   font-size: 14px;
 }
 
-#contact-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: -10px;
+#contact {
+  margin: 0;
+  margin-top: 10px;
 }
 
-#contact-list > li {
-  padding-bottom: 5px;
+#contact-list {
+  margin: 0;
+}
+
+#affiliate-link-title {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.affiliate-link-p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.affiliate-link {
+  text-decoration: none;
+  color: var(--accent-color1);
 }
 
 #social-icons {
@@ -271,12 +320,16 @@ main {
 }
 
 .icons {
-  display: grid;
+  display: flex;
   justify-content: center;
   place-items: center;
-  text-align: center;
   margin: 0 auto;
-  vertical-align: middle;
+  height: 100%;
+}
+
+.social-links {
+  color: var(--accent-color1);
+  text-decoration: none;
 }
 
 
@@ -323,7 +376,7 @@ main {
   height: 25px;
   right: -17px;
   background-color: white;
-  border: 4px solid #FF9F55;
+  border: 4px solid var(--accent-color2);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
