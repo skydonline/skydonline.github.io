@@ -4,7 +4,6 @@
   --accent-color3: #B8C6DB; /* the color the social media buttons turn into */
 	--main-color1: #DDD0C8; /* body and header color */
   --divider-color: rgba(0, 0, 0, 0.1); /* coloring under section bars */
-  --certification-size: 12px; /* size of certification section text */
   --projects-learning-section: 120px; /* size of projects & learning section */
 }
 
@@ -32,7 +31,7 @@ body {
 #title {
 	text-align: center;
 	color: var(--accent-color1);
-	font-size: 3.2vw;
+	font-size: clamp(12px, 3.2vw, 30px);
   margin-left: 15px;
   font-family: "Anton";
   font-weight: normal;
@@ -67,7 +66,7 @@ header {
 
 .header-nav-list {
   font-family: sans-serif;
-  font-size: 1.5vw;
+  font-size: clamp(10px, 1.5vw, 16px);
 }
 
 .section-header {
@@ -120,7 +119,7 @@ main {
 
 #about-me-p {
   margin: 0;
-  font-size: 3.2vw;
+  font-size: clamp(12px, 1.5vw, 20px);
   margin-top: 10px;
   margin-right: 40px;
 }
@@ -153,7 +152,7 @@ main {
 }
 
 .individual-certification-details {
-  font-size: var(--certification-size);
+  font-size: 12px;
   float: right;
   text-align: right;
   margin: 0;
