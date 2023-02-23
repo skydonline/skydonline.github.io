@@ -67,7 +67,7 @@ header {
 
 .header-nav-list {
   font-family: sans-serif;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .section-header {
@@ -105,8 +105,8 @@ main {
 
 /* about section */
 #about-image {
-  max-width: 200px;
-  height: 200px;
+  max-width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px;
   align-items: left;
@@ -120,13 +120,14 @@ main {
 
 #about-me-p {
   margin: 0;
-  font-size: 15px;
+  font-size: 3.2vw;
   margin-top: 10px;
   margin-right: 40px;
 }
 
 #about-text {
-  height: 200px;
+  width: 100vw;
+  height: 100vh;
 }
 
 
