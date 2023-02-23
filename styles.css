@@ -1,7 +1,7 @@
 :root {
 	--accent-color1: rgb(57, 60, 65); /* nav bar colors */
   --accent-color2: #000000; /* section header and social icon colors */
-  --accent-color3: #B8C6DB; /* the color the social media buttons turn into */
+  --accent-color3: white; /* the color the social media buttons turn into */
 	--main-color1: #DDD0C8; /* body and header color */
   --divider-color: rgba(0, 0, 0, 0.1); /* coloring under section bars */
   --projects-learning-section: 120px; /* size of projects & learning section */
@@ -204,9 +204,11 @@ main {
 
 .collapsible-buttons {
   width: 100%;
-  place-items: center;
+  text-align: center;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .collapsible-content {
@@ -234,6 +236,8 @@ main {
   font-family: "Anton";
   border-radius: 15px;
   color: white;
+  height: clamp(40px, 1.5vh, 80px);
+  width: clamp(50px, 2vw, 100px);
 }
 
 .project-date {
