@@ -72,6 +72,7 @@ header {
 .section-header {
   color: var(--accent-color2);
   text-align: center;
+  display: relative;
 }
 
 .divider {
@@ -115,6 +116,13 @@ main {
   overflow: auto;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  #about-image {
+    max-width: 200px;
+    height: 200px;
+  }
 }
 
 #about-me-p {
