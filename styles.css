@@ -31,7 +31,7 @@ body {
 #title {
 	text-align: center;
 	color: var(--accent-color1);
-	font-size: clamp(16px, 3.2vw, 30px);
+	font-size: clamp(20px, 3.2vw, 30px);
   margin-left: 15px;
   font-family: "Anton";
   font-weight: normal;
@@ -66,7 +66,7 @@ header {
 
 .header-nav-list {
   font-family: sans-serif;
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: clamp(8px, 1.5vw, 16px);
 }
 
 .section-header {
@@ -126,7 +126,7 @@ main {
 
 #about-text {
   width: 100vw;
-  height: 50vh;
+  height: clamp(200px, 50vh, 400px);
 }
 
 
@@ -172,10 +172,6 @@ main {
 
 /* project section */
 #projects-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 16px;
   margin: 0 auto;
   margin-bottom: var(--projects-learning-section);
   padding: 20px 10px;
@@ -186,7 +182,8 @@ main {
 
 .project-content {
   margin: 0;
-  padding: 0;
+  align-items: center;
+  text-align: center;
   max-width: 80vw;
   word-wrap: break-word;
 }
@@ -205,19 +202,17 @@ main {
 .collapsible-buttons {
   width: 100%;
   text-align: center;
-  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-evenly;
 }
 
 .collapsible-content {
   display: none;
   position: absolute;
   transition: display 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  text-align: center;
   opacity: 0;
   width: 100%;
+  text-align: center;
 }
 
 .collapsible-content.initial-state {
@@ -246,18 +241,6 @@ main {
 
 .project-notes {
   font-size: 13px;
-}
-
-.btn {
-  border: none;
-  display: flex;
-  justify-content: center;
-}
-
-.btn:hover {
-  filter: invert(1);
-  display: flex;
-  justify-content: center;
 }
 
 
