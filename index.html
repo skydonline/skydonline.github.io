@@ -283,14 +283,6 @@ for (let i = 0; i < triggers.length; i++) {
     });
 } 
 
-// update copyright year
-function updateYear() {
-    var d = new Date();
-    var n = d.getFullYear();
-    document.getElementById("year").innerHTML = n;
-  }
-  updateYear();
-
   // hamburger menu
   function myFunction() {
   var x = document.getElementById("myLinks");
@@ -300,6 +292,14 @@ function updateYear() {
     x.style.display = "block";
   }
 }
+
+// update copyright year
+function updateYear() {
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("year").innerHTML = n;
+  }
+  updateYear();
     </script>
 </body>
 </html>
