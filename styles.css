@@ -12,7 +12,7 @@
   --projects-learning-section: 120px; /* size of projects & learning section */
   --primary-font: "Georgia"; /* title, timeline */
   --body-font: "Avenir"; /* main body text */
-  --code-font: "Consolas"; /* font used during coding */
+  --code-font: Hack, monospace; /* hack font */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -219,57 +219,49 @@ header {
   align-items: center;
 }
 
-.project-content {
-  margin: 0 auto;
-  margin-top: 15px;
-  align-items: center;
-  text-align: center;
-  width: clamp(40vw, 60vw, 80vw);
-  word-wrap: break-word;
+.collapsible {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 80vw;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--code-font);
 }
-
-.collapsible-buttons {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
+  
+.active, .collapsible:hover {
+    background-color: #555;
 }
-
-.collapsible-content {
-  display: none;
-  position: absolute;
-  transition: display 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  opacity: 0;
-  width: 100%;
-  text-align: center;
+  
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
-
-.collapsible-content.initial-state {
-  opacity: 0;
-  display: block;
+  
+.active:after {
+    content: "\2212";
 }
-
-.collapsible-content.open {
-  display: block;
-  opacity: 1;
-}
-
-.collapsible-trigger {
-  border: none;
-  background-color: var(--accent-color2);
-  font-family: var(--primary-font);
-  border-radius: 15px;
-  color: white;
-  height: clamp(40px, 1.5vh, 80px);
-  width: clamp(50px, 2vw, 100px);
-}
-
-.project-date {
-  font-size: 14px;
-}
-
-.project-notes {
-  font-size: 13px;
+  
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 
@@ -278,6 +270,7 @@ header {
 #other-info {
   position: relative;
   display: block;
+  margin-top: 10px;
 }
 
 #other-info-text {

@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device_width, initial-scale=1.0">
     <meta name="description" content="Sky Deng's Website">
 	<link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir" > <!-- avenir font -->
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'> <!-- hack font -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/> <!-- social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 	<title>Sky Deng's Website</title>
 </head>
 
@@ -193,25 +193,17 @@
         </div>
 
         <!-- projects section -->
-        <div id="projects-section">
-            <div class="collapsible-section">
-                <div class="collapsible-buttons">
-                    <button class="collapsible-trigger" id="trigger1">Website</button>
-                    <button class="collapsible-trigger" id="trigger2">Project 2</button>
-                </div>
-
-                <div class="collapsible-content initial-state" id="content1">
-                    <p class="project-content">Through learning HTML & CSS in freeCodeCamp, I decided to create my own portfolio website to demonstrate my learning. 
-                        This project was an exciting journey that involved the use of various web development technologies such as HTML, CSS, and JavaScript to create a visually appealing and user-friendly website among numerous devices. 
-                        My goal was to create a website that is not only functional but also easy to navigate for our visitors.
-                        I hope you enjoy browsing my website!
-                    </p>
-                 </div>
-                 <div class="collapsible-content initial-state" id="content2">
-                    <p class="project-content">Collapsible content 2</p>
-                </div>
+        <button class="collapsible">Website</button>
+            <div class="content">
+                <p>Through learning HTML & CSS in freeCodeCamp, I decided to create my own portfolio website to demonstrate my learning. 
+                This project was an exciting journey that involved the use of various web development technologies such as HTML, CSS, and JavaScript to create a visually appealing and user-friendly website among numerous devices. 
+                My goal was to create a website that is not only functional but also easy to navigate for our visitors.
+                I hope you enjoy browsing my website!</p>
             </div>
-        </div>        
+        <button class="collapsible">Section 2</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>   
 
         <!-- other info header -->
         <div id="other-info">
@@ -265,23 +257,20 @@
 
     <script>
         // allows for collapsible content
-        let triggers = document.getElementsByClassName("collapsible-trigger");
+        var coll = document.getElementsByClassName("collapsible");
+var i;
 
-for (let i = 0; i < triggers.length; i++) {
-    triggers[i].addEventListener("click", function() {
-        let contentId = this.getAttribute("id").replace("trigger", "content");
-        let content = document.getElementById(contentId);
-        let openContent = document.getElementsByClassName("collapsible-content open")[0];
-        if (content.classList.contains("open")) {
-            content.classList.remove("open");
-        } else {
-            if (openContent) {
-                openContent.classList.remove("open");
-            }
-            content.classList.add("open");
-        }
-    });
-} 
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
 
   // hamburger menu
   function myFunction() {
