@@ -4,6 +4,7 @@
   --accent-color2: #000000; /* section header */
   --accent-color3: white; /* the color the social media buttons turn into */
   --accent-color4: #E85A4F; /* timeline, footer, social media icon */
+  --accent-color5: #8E8D8A; /* project hover color */
   --section-color: #f5f5f7; /* section */
 	--main-color1: #EAE7DC; /* body and header color */
   --divider-color: rgba(0, 0, 0, 0.1); /* coloring under section bars */
@@ -176,6 +177,10 @@ header {
 
 
 /* certification section */
+#certifications-header {
+  margin-top: 20px;
+}
+
 .certification {
   font-size: 16px;
 }
@@ -240,8 +245,12 @@ header {
   font-family: var(--code-font);
 }
   
-.active, .collapsible:hover {
-    background-color: #555;
+.collapsible:hover {
+  background-color: var(--accent-color5);
+}
+
+.active {
+  background-color: black;
 }
   
 .collapsible:after {
@@ -311,6 +320,10 @@ header {
   color: var(--accent-color);
 }
 
+#socials {
+  margin-top: 10px;
+}
+
 #social-icons {
   display: flex;
   justify-content: center;
@@ -330,11 +343,11 @@ header {
 }
 
 .icon-circle:hover {
-  background-color: var(--accent-color3);
+  background-color: var(--accent-color5);
 }
 
 .icon-link:hover {
-	background-color: var(--accent-color3);
+	background-color: var(--accent-color5);
 }
 
 .icons {
